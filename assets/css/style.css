@@ -1,0 +1,10 @@
+.carousel-inner>.carousel-item>img {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+#divMainGallery {
+margin-top: 10vh;
+
+}
