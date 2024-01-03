@@ -1,0 +1,16 @@
+{
+    "name": "carloslincon29/blogx",
+    "description": "Um projeto feito para ser a copia do X",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Carloslincon29\\Blogx\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "CarlosLincon <carloslincon29@gmail.com>"
+        }
+    ],
+    "require": {}
+}
