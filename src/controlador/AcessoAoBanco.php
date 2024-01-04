@@ -1,4 +1,7 @@
 <?php
+namespace Carloslincon29\Blogx\controlador;
+
+use mysqli;
 
 class AcessoAoBanco
 {

@@ -1,5 +1,9 @@
 <?php
-require_once './controlador/Postagem.php';
+require_once 'controlador/Postagem.php';
+use Carloslincon29\Blogx\controlador\Postagem;
+
+
+
 
 $postagem = new Postagem();
 

@@ -1,4 +1,5 @@
 <?php
+namespace Carloslincon29\Blogx\controlador;
 require_once 'AcessoAoBanco.php';
 
 
