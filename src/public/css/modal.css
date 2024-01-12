@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+/* Estrutura padrão do modal */
+
+.modal-principal#modal-ativo {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+
+}
+
+.container-main-modal {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerModalPG {
+    max-width: 80%;
+    min-width: 30%;
+    width: auto;
+    height: 90%;
+    background-color: #f5f5f5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+
+.modalPG-fecharMD {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.container-modalPG-fechar {
+    width: 95%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a70e0e;
+    font-family: 'Poppins', sans-serif;
+    color: #f5f5f5;
+}
+
+/* Fim da estrutura padrão do modal */
+
+
+/* Modificadores para o form login e cadrastro */
+
+.containerLogin {
+    width: 90%;
+    max-height: 90%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.01);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.headerLogin {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.headerLogin h1 {
+    font-family: 'Noto Sans', sans-serif;
+    color: #0d1b99;
+}
+.containerFormLogin {
+  width: 80%;
+  height: 90%;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.formulario {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.formulario input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.formulario button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #0d1b99;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.formulariobutton:hover,.formulario button:active,.formulario button:focus {
+  background: #0d1b99;
+}
+.formulario .mensagem {
+  margin: 15px 0 0;
+  color: #7c7c7c;
+  font-size: 12px;
+}
+.formulario .mensagem span {
+  color: #0d1b99;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.formulario.registro-form {
+  display: none;
+}
+
+
+
+/* Fim dos modificadores para o form login e cadrastro */
