@@ -1,138 +1,334 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap');
 
 
-
-.container-postagens {
+/* Seletores css do main e section-main dos cards */
+.section-container-postagens {
     width: 50%;
-    height: 100%;
+    min-height: 100vh;
+    position: initial;
+    height: auto;
     border-top: none;
     border-bottom: none;
-
+    margin: 0;
+    position: absolute;
+    top: 0;
+    border-left: #f5f5f577 1px solid;
+    border-right: #f5f5f577 1px solid;
 }
 
-.grupoPG {
+.container-postagens {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
+  
 }
 
-.postagem {
+/* Fim dos seletores css do main e section-main dos cards */
 
-    display: flex;
-    align-content: center;
-    justify-content: center;
+
+
+/* _______________Card postagem quando não está ativa _______________*/
+
+/* Seletores do container-main dos cards */
+.container-postagem {
     width: 100%;
-    min-height: 100px;
+    min-height: 118px;
+    max-height: 100vh;
     height: auto;
-    max-height: 160px;
-    padding: 25px;
-    border: #f5f5f5 1px solid;
+    border: #f5f5f577 1px solid;
     border-top: none;
     cursor: pointer;
+
 }
 
-.postagem:hover {
+
+
+.container-postagem:hover {
     background-color: rgba(255, 255, 255, 0.03);
 }
 
-.postagem div.fecharDiv {
+
+
+.cp-container {
+    width: 100%;
+    min-height: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto;
+}
+
+/* Fim dos seletores do container-main dos cards */
+.postagemContainer-fechar-div {
     display: none;
 }
 
-.postagem:nth-child(1) {
-    margin-top: 10px;
-    border-top: #f5f5f5 1px solid;
-}
-
-.postagem span.titulo {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    /* Substitua N pelo número de linhas que você deseja exibir */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    max-height: 100px;
-    font-size: 13px;
-    font-family: 'Poppins', sans-serif;
-    color: #f5f5f5;
-}
-
-
-.postagem#postagemAtiva {
-    position: absolute;
-    height: 100%;
+/* Seletores css da parte das informações do card */
+.info-postagem {
     width: 100%;
-    z-index: 12;
-    background-color: #000;
-    min-height: 100%;
-    max-height: none;
-    margin-top: 0;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: initial;
-    align-items: initial;
-    overflow-y: auto;
-
-}
-
-.postagem#postagemAtiva div.fecharDiv {
-    display: block;
-    height: 65px;
-    width: 100%;
-    overflow: hidden;
+    height: 35%;
     display: flex;
     align-items: center;
-    justify-self: left;
+    flex-wrap: nowrap;
+    padding: 10px;
 }
 
-.postagem#postagemAtiva div.fecharDiv .container-fechar {
+.menu-foto-perfil-dados-postagem {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+
+}
+
+.menu-foto-perfil-dados-postagem img {
+    width: 64px;
+    height: 64px;
+}
+
+.menu-dados-perfil-dados-postagem {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.menu-dados-perfil-dados-postagem-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 35%;
+    width: auto;
+    height: 25%;
+    margin: 0;
+}
+
+.menu-dados-nome-horario-dados-postagem,
+.menu-dados-email-dados-postagem {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+}
+
+.menu-dados-nome-horario-dados-postagem {
+    display: flex;
+    margin: 0;
+}
+
+.menu-dados-nome-horario-dados-postagem span {
+    margin: 0;
+}
+
+.menu-dados-nome-horario-dados-postagem span:nth-child(2) {
+    margin-left: 10px;
+}
+
+.menu-dados-email-dados-postagem p {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.container-inf {
+    width: 80%;
+    max-height: 45%;
+    height: auto;
+
+
+}
+
+.cn-inf-campo-texto-container {
+    width: 100%;
+    height: auto;
+}
+
+.cn-inf-campo-texto-container .campo-texto-container-texto {
+    display: -webkit-box;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 1em;
+    color: #f5f5f5;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.cn-inf-campo-media {
+    max-width: 80%;
+    width: auto;
+    height: 80%;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
-    width: 25%;
-    margin: 0;
 
 }
 
-.postagem#postagemAtiva div.fecharDiv .container-fechar button {
-    width: 100px;
-    height: 33px;
-    font-size: 13px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    margin: 0 auto;
-    cursor: pointer;
+
+.campo-media-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     border-radius: 10px;
-    background-color: #000;
-    border: 1px solid #f5f5f5;
-    color: #f5f5f5;
-}
+    margin-top: 10px;
 
-.postagem#postagemAtiva div.fecharDiv .container-fechar button:hover {
-    transition: all 0.5s ease-in-out;
-    color: #0bdfeb;
-    border: 1px solid #0bdfeb;
-}
-
-.postagem#postagemAtiva .container-inf {
-    min-height: 90%;
-    width: 100%;
 
 }
 
-.postagem#postagemAtiva .container-inf span.titulo {
-    display: inline-block;
-    -webkit-line-clamp: initial;
-    /* Substitua N pelo número de linhas que você deseja exibir */
-    -webkit-box-orient: initial;
+.campo-media-container-div {
+    width: 90%;
+    height: 100%;
     overflow: hidden;
-    max-height: none;
-    text-wrap: wrap;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.campo-media-container-div img {
+    width: auto;
+    height: auto;
+    max-height: 350px;
+    max-width: 100%;
+    min-width: 100px;
+    display: block;
+    object-fit: contain;
+    border-radius: 10px;
+
+}
+
+
+/* _______________Fim dos seletores css da parte das informações do card_______________ */
+
+
+
+/* Seletores css para o controle das postagens */
+
+.postagem-controler {
+    height: 45px;
     width: 100%;
+    margin: 10px 0 0 0;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.postagem-controler-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+
+.bi-chat:hover {
+    transform: scale(1.2);
+    color: #0a2df7;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(250, 250, 250, 0.09);
+}
+
+.bi-floppy:hover {
+    transform: scale(1.2);
+    color: #79cf08;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(250, 250, 250, 0.09);
+}
+
+.bi-arrow-through-heart:hover {
+    transform: scale(1.2);
+    color: #f02a07;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(250, 250, 250, 0.09);
+
+}
+
+/* Fim dos seletores css para o controle das postagens */
+
+/* Fim dos seletores do Card postagem quando não está ativa  */
+
+
+/* Seletores css para quando o card estiver ativo */
+
+.container-postagem#postagemAtiva {
+    max-height: none;
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    background-color: #000;
+    z-index: 12;
+    top: 0;
+}
+
+.container-postagem#postagemAtiva .postagemContainer-fechar-div {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+
+}
+
+.container-postagem#postagemAtiva .postagemContainer-fechar-div .fecharDiv {
+    max-width: 250px;
+    width: auto;
+    height: 100%;
+
+    margin: 0;
+}
+
+.container-postagem#postagemAtiva .postagemContainer-fechar-div .fecharDiv .container-fechar {
+    width: 50%;
     height: 100%;
 
 }
+
+.container-postagem#postagemAtiva .postagemContainer-fechar-div .fecharDiv .container-fechar button.botaoFechar {
+    margin-left: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    color: #000;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1em;
+    border-radius: 22px;
+    cursor: pointer;
+}
+
+.container-postagem#postagemAtiva .container-inf {
+    width: 80%;
+    max-height: 50%;
+    height: auto;
+
+
+}
+
+.container-postagem#postagemAtiva .cn-inf-campo-texto-container {
+    width: 100%;
+    height: auto;
+}
+
+.container-postagem#postagemAtiva .cn-inf-campo-texto-container .campo-texto-container-texto {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    -webkit-line-clamp: none;
+    -webkit-box-orient: none;
+    overflow: hidden;
+    font-size: 1em;
+    color: #f5f5f5;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* Fim seletores css para quando o card estiver ativo */

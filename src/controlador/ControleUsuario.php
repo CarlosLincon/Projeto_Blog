@@ -10,9 +10,6 @@ use Carloslincon29\Blogx\controlador\AcessoAoBanco;
 
 class ControleUsuario
 {
-    private bool $usuarioLogado = false;
-    private string $nomeDoUsuario = "";
-    private string $emailDoUsuario = "";
     private $acessoaobanco;
     private $conexao;
     public function __construct()
@@ -20,17 +17,10 @@ class ControleUsuario
         session_start();
         if (!isset($_SESSION["UsuarioLogado"]) or $_SESSION["UsuarioLogado"] === false) {
             $_SESSION["UsuarioLogado"] = false;
-        } 
+        }
         $this->acessoaobanco = new AcessoAoBanco();
         $this->conexao = $this->acessoaobanco->getConexaoAoBanco();
     }
-
-    public function statusUsuario()
-    {
-        return $this->usuarioLogado;
-    }
-
-
 
     public function criarUsuario(string $nome_Usuario, string $senha_Usuario, string $email_Usuario)
     {
@@ -62,27 +52,23 @@ class ControleUsuario
         $consultandoNoBanco->execute();
         $resultadoDoLogin = $consultandoNoBanco->get_result();
         if ($resultadoDoLogin->num_rows === 1) {
-
             $dadosDoLogin = $resultadoDoLogin->fetch_assoc();
-            $this->nomeDoUsuario = $dadosDoLogin['nome_usuario'];
-            $this->emailDoUsuario = $dadosDoLogin['email_usuario'];
-            $_SESSION["Nome_Usuario"] = $dadosDoLogin['nome_usuario'];
-            $_SESSION["Email_Usuario"] = $dadosDoLogin['email_usuario'];
-            $_SESSION["UsuarioLogado"] = true;
-            $this->usuarioLogado = true;
+            $_SESSION['NomeUsuario'] = $dadosDoLogin['nome_usuario'];
+            $_SESSION['EmailUsuario'] = $dadosDoLogin['email_usuario'];
+            $_SESSION['IDUsuario'] = $dadosDoLogin['id'];
+            $_SESSION['UsuarioLogado'] = true;
+            $fotoPerfil64 = base64_encode($dadosDoLogin['foto_perfil']);
+            $tipoFotoPerfil = $dadosDoLogin['tipo_da_imagem'];
+            $fotoPerfilSrc = "data:image/$tipoFotoPerfil;base64,$fotoPerfil64";
+            $_SESSION['FotoPerfilSrc'] = $fotoPerfilSrc;
         }
     }
-
-    public function pegandoNomeDoUsuario(): string
+    public function deslogar()
     {
-
-        return $this->nomeDoUsuario;
-    }
-
-
-    public function pegandoEmailDoUsuario(): string
-    {
-
-        return $this->emailDoUsuario;
+        $_SESSION['NomeUsuario'] = "";
+        $_SESSION['EmailUsuario'] = "";
+        $_SESSION['IDUsuario'] = 0;
+        $_SESSION['UsuarioLogado'] = false;
+        $_SESSION['FotoPerfilSrc'] = "";
     }
 }

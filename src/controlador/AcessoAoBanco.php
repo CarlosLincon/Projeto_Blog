@@ -19,7 +19,7 @@ class AcessoAoBanco
         $this->conexaoAoBanco = new mysqli($this->host, $this->usuario, $this->senha, $this->banco);
         $this->conexaoAoBanco->set_charset("utf8");
         }catch (Exception $e){
-           echo 'Erro: ', $e->getMessage();
+           echo 'Erro ao conectar com o Banco de Dados: ', $e->getMessage();
         }
     }
     public function getConexaoAoBanco()

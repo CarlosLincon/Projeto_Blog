@@ -1,4 +1,269 @@
-.container-menu{
-width: 25%;
-height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap');
+
+.container-menu {
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    right: inherit;
+    top: 0;
+    left: 0;
+}
+
+.container-menu-opcoes {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.container-menu-opcoes-logo {
+    width: 50%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+
+}
+
+.container-menu-opcoes-logo img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+
+}
+
+.container-menu-opcoes-logo span {
+    width: 100%;
+    height: 20%;
+    display: block;
+
+}
+
+.container-menu-opcoes-logo span h1 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    transform: translateY(-1.5rem);
+}
+
+.nav-controle-menu {
+    width: 80%;
+    height: 60%;
+
+}
+
+.nav-controle-menu ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nav-controle-menu ul li {
+    width: 70%;
+    height: 15%;
+    background-color: #000;
+    list-style: none;
+    font-size: 1.3em;
+    font-family: 'Noto Sans', sans-serif;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 5px;
+}
+
+
+.nav-controle-menu ul li:hover {
+    transition: all 0.2s ease;
+    color: #0bdfeb;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.container-menu-opcoes-ul-li-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: relative;
+}
+
+.container-menu-opcoes-ul-li-div i {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-menu-opcoes-ul-li-div span {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.container-menu-opcoes-ul-li-div:hover span {
+    transition: all 0.1s ease-in-out;
+    color: #0bdfeb;
+
+}
+
+.container-menu-opcoes-ul-li-div:hover span::after {
+    content: "";
+    width: 5%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    border-bottom: 1px solid #0bdfeb;
+}
+
+.container-menu-usuario {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+
+}
+
+.container-menu-usuario:hover {
+    transition: background-color 1s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.contener-card-perfil {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+}
+
+.menu-foto-perfil {
+    width: 30%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+
+.menu-foto-perfil img {
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: 99%;
+}
+
+.menu-dados-perfil {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+   
+}
+
+.menu-dados-nome,
+.menu-dados-email {
+    width: 100%;
+    height: 25%;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.menu-dados-email p {
+    color: #c5c5c5;
+}
+
+.container-menu-usuario-login {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-usuario-login-button {
+    width: 60%;
+    height: 60%;
+    background-color: #f5f5f5;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    transition: 0.2s all ease-in-out;
+    border-radius: 10%;
+    font-size: 1.4em;
+    border: none;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.menu-usuario-login-button:hover {
+    transform: scale(1.1);
+    background-image: linear-gradient(to right, #f6f7f8 0%, #f6f7f8 10%, #f6f7f8 20%, #ffffff 100%);
+    background-size: 200% 100%;
+    animation: bgPos 2s ease-in-out;
+
+}
+
+.container-menu-opcoes-postagem {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.container-menu-opcoes-postagem-button {
+    width: 50%;
+    height: 50%;
+    background-color: #01048a;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 10%;
+    font-size: 1.4em;
+    border: none;
+    color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.container-menu-opcoes-postagem-button:hover {
+    transition: transform ease 0.5s;
+    transform: scale(1.1);
+}
+
+@keyframes bgPos {
+    0% {
+        background-position: 50% 0;
+    }
+
+    100% {
+        background-position: -150% 0;
+    }
 }

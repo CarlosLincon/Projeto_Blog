@@ -1,15 +1,31 @@
+body {
+    background-color: #000;
+    overflow: hidden auto;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+}
 
+body::-webkit-scrollbar {
+    background-color: transparent;
+}
 
- body {
-     background-color: #000;
- }
+body::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+}
 
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
 
- .container-principal {
-     width: 100vw;
-     height: 100vh;
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
+.container-principal {
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
